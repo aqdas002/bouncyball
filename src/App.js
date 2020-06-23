@@ -1,26 +1,100 @@
-import React from 'react';
-import logo from './logo.svg';
+import React , {Component} from 'react';
 import './App.css';
+import {Line} from 'react-chartjs-2';
+import DataProvider from './DataProvider';
+import Bounce from './Bounce';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+constructor(){
+  super();
+  this.state={
+    bounce:0,
+    Height:0,
+    Cor:0,
+    data :{
+      labels:["t1","t2","t3","t4","t5","t6","t7","t8"],
+      datasets : [
+      {
+        label : "Ball Path",
+        backgroundColor: "rgba(255,0,255,0.75)",
+        data: []
+
+      }]
+    }
+  }
 }
+
+onHeightChange=(event)=>{
+  console.log()
+  this.setState({
+      Height:event.target.value
+  })
+}
+onCorChange=(event)=>{
+  this.setState({
+    Cor:event.target.value
+  })
+}
+onSubmit=()=>{
+  var i =1;
+  var h = this.state.Height;
+  const c =this.state.Cor;
+  const arr=[h,0];
+  var t = Math.pow((2*h/10),0.5);
+  console.log(t);
+  const time =[0,t]
+
+  while(h>0){
+    i++;
+    h=Math.pow(c,2)*h;
+    arr.push(h);
+    arr.push(0);
+    var k = Math.pow((2*h/10),0.5);
+    console.log(k);
+    t=t+k;
+    time.push(t);
+    console.log(t);
+    t=t+k;
+    time.push(t);
+
+  }
+  this.setState({
+    bounce:i,
+    data:{
+      labels:[...time],
+      datasets : [
+      {
+        label : "Ball Path",
+        backgroundColor: "rgba(255,0,255,0.75)",
+        data: [...arr]
+
+      }]
+    }
+  })
+
+
+}
+
+  render(){
+   return ( 
+    <div style={{position:"relative", width:"80vw",height:"80vh"}}>
+    <h3 > Bouncy Balll </h3>
+    <DataProvider 
+     onHeightChange={this.onHeightChange}
+     onCorChange = {this.onCorChange} 
+     onSubmit ={this.onSubmit}  />
+    <Bounce bounce={this.state.bounce}/>
+    <Line 
+       options= {{
+        responsive:true
+      }}
+      data={this.state.data}
+      />
+    </div>
+    )
+  }
+}
+
 
 export default App;
