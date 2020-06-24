@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+h1 {
+  text-align: center;
+ color:  #242322;
+  font-family: 'Free Agent 3D';
+  font-weight: 800px;
+}

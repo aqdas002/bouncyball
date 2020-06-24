@@ -43,9 +43,10 @@ onSubmit=()=>{
   const arr=[h,0];
   var t = Math.pow((2*h/10),0.5);
   console.log(t);
-  const time =[0,t]
+  const time =[0];
+   time.push(t.toFixed(3));
 
-  while(h>0){
+  while(h>0.01){
     i++;
     h=Math.pow(c,2)*h;
     arr.push(h);
@@ -53,10 +54,10 @@ onSubmit=()=>{
     var k = Math.pow((2*h/10),0.5);
     console.log(k);
     t=t+k;
-    time.push(t);
+    time.push(t.toFixed(3));
     console.log(t);
     t=t+k;
-    time.push(t);
+    time.push(t.toFixed(3));
 
   }
   this.setState({
@@ -79,7 +80,7 @@ onSubmit=()=>{
   render(){
    return ( 
     <div style={{position:"relative", width:"80vw",height:"80vh"}}>
-    <h3 > Bouncy Balll </h3>
+    <h1 > Bouncy Balll </h1>
     <DataProvider 
      onHeightChange={this.onHeightChange}
      onCorChange = {this.onCorChange} 
@@ -87,7 +88,21 @@ onSubmit=()=>{
     <Bounce bounce={this.state.bounce}/>
     <Line 
        options= {{
-        responsive:true
+        responsive:true,
+         scales: {
+             yAxes: [{
+                 scaleLabel: {
+                       display: true,
+                      labelString: 'Height in meter'
+        }
+    }],
+    xAxes: [{
+                 scaleLabel: {
+                       display: true,
+                      labelString: 'Time in sec'
+        }
+    }]
+  }   
       }}
       data={this.state.data}
       />

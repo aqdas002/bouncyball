@@ -7,8 +7,8 @@ const dataProvider = ({onHeightChange,onCorChange,onSubmit})=>{
  <input type='text'onChange = {onHeightChange} 
         placeholder='enter initial height'/>
         <input type='text'onChange = {onCorChange} 
-        placeholder='enter coefficient o restitution'/>
-          <button type="submit" className='w-30 grow f4 link ph3 pv2 dib white bg-light-blue center'
+        placeholder='enter coefficient of restitution'/>
+          <button type="submit"
                onClick={onSubmit}>Detect</button>
         </div>
 )
