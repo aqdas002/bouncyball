@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/bouncyball/static/css/main.ed96179d.chunk.css",
-    "main.js": "/bouncyball/static/js/main.de18f2cb.chunk.js",
-    "main.js.map": "/bouncyball/static/js/main.de18f2cb.chunk.js.map",
+    "main.css": "/bouncyball/static/css/main.a5ec6543.chunk.css",
+    "main.js": "/bouncyball/static/js/main.c1f5c2b8.chunk.js",
+    "main.js.map": "/bouncyball/static/js/main.c1f5c2b8.chunk.js.map",
     "runtime-main.js": "/bouncyball/static/js/runtime-main.399983da.js",
     "runtime-main.js.map": "/bouncyball/static/js/runtime-main.399983da.js.map",
     "static/js/2.a63800a4.chunk.js": "/bouncyball/static/js/2.a63800a4.chunk.js",
     "static/js/2.a63800a4.chunk.js.map": "/bouncyball/static/js/2.a63800a4.chunk.js.map",
     "index.html": "/bouncyball/index.html",
-    "precache-manifest.457223ac27b63ddaab2f8d219ba4c214.js": "/bouncyball/precache-manifest.457223ac27b63ddaab2f8d219ba4c214.js",
+    "precache-manifest.c20dcc8eec0b7749187fcbaa7cc2a048.js": "/bouncyball/precache-manifest.c20dcc8eec0b7749187fcbaa7cc2a048.js",
     "service-worker.js": "/bouncyball/service-worker.js",
-    "static/css/main.ed96179d.chunk.css.map": "/bouncyball/static/css/main.ed96179d.chunk.css.map",
+    "static/css/main.a5ec6543.chunk.css.map": "/bouncyball/static/css/main.a5ec6543.chunk.css.map",
     "static/js/2.a63800a4.chunk.js.LICENSE.txt": "/bouncyball/static/js/2.a63800a4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.399983da.js",
     "static/js/2.a63800a4.chunk.js",
-    "static/css/main.ed96179d.chunk.css",
-    "static/js/main.de18f2cb.chunk.js"
+    "static/css/main.a5ec6543.chunk.css",
+    "static/js/main.c1f5c2b8.chunk.js"
   ]
 }

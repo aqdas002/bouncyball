@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57b45f34888a91d6a1374bcdd3f88dd7",
+    "revision": "1ad72094bffe5622f239be2f6f291bcd",
     "url": "/bouncyball/index.html"
   },
   {
-    "revision": "f6eca99cf1d4549a2132",
-    "url": "/bouncyball/static/css/main.ed96179d.chunk.css"
+    "revision": "69c68ff0ad14358d737e",
+    "url": "/bouncyball/static/css/main.a5ec6543.chunk.css"
   },
   {
     "revision": "18692cc531a6e41cc81d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bouncyball/static/js/2.a63800a4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f6eca99cf1d4549a2132",
-    "url": "/bouncyball/static/js/main.de18f2cb.chunk.js"
+    "revision": "69c68ff0ad14358d737e",
+    "url": "/bouncyball/static/js/main.c1f5c2b8.chunk.js"
   },
   {
     "revision": "e50ff9fad749a9c66f2e",
